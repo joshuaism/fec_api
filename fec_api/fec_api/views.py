@@ -59,7 +59,7 @@ def iterator(url):
         pages = 20
 
     print(f'return 1 of {pages}')
-    yield f"data: {json.dumps(results)}\n\n"
+    yield f"[{json.dumps(results)}"
 
     for i in range(2, pages + 1):
         page_query = f"&last_index={last_index}&last_contribution_receipt_amount={last_amount}"
@@ -73,7 +73,8 @@ def iterator(url):
         last_index = pagination['last_indexes']['last_index']
         last_amount = pagination['last_indexes']['last_contribution_receipt_amount']
         print(f'return {i} of {pages}')
-        yield f"data: {json.dumps(results)}\n\n"
+        yield f", {json.dumps(results)}"
+    yield "]"
 
 def create_url(names, employers, committees, cycles, occupations, committee_types, cities, state):
     url='https://api.open.fec.gov/v1/schedules/schedule_a/'
