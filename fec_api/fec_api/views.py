@@ -10,7 +10,7 @@ api_key = os.environ.get('FEC_API_KEY')
 def scheduleA(request):
     names = request.GET.getlist('name')
     employers = request.GET.getlist('employer')
-    committees = request.GET.getlist('committees')
+    committees = request.GET.getlist('committee')
     cycles = request.GET.getlist('cycle')
     occupations = request.GET.getlist('occupation')
     committee_types = request.GET.getlist('committee_type')
