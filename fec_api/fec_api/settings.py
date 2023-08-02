@@ -56,6 +56,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = "fec_api.urls"
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
     "http://localhost:4200",
     "https://joshuaism.github.io",
 ]

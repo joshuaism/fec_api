@@ -20,5 +20,6 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('scheduleA/', views.scheduleA)
+    path('scheduleA/', views.scheduleA),
+    path('react/', views.react)
 ]
