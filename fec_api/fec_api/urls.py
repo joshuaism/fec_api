@@ -21,5 +21,9 @@ from . import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('scheduleA/', views.scheduleA),
-    path('react/', views.react)
+    path('react/', views.react),
+    path('scheduleE/candidate/<str:candidateid>',
+         views.scheduleE, name="candidate"),
+    path('candidates/', views.candidates),
+    path('candidate/<str:candidateid>', views.candidate, name="candidate"),
 ]
